@@ -4,15 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="320dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="32dp"
+        android:rotation="90"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LinURL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/webView"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextURL"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/edit_text_url_hint"
+            android:inputType="textUri" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/btn_load_url" />
+    </LinearLayout>
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        app:layout_constraintTop_toBottomOf="@+id/LinURL">
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddPoint"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                android:text="@string/btn_add_point" />
+
+            <ImageButton
+                android:id="@+id/buttonUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_up" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonReproduce"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/btn_reproduce_record" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/buttonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonRecord"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/btn_start_record" />
+
+            <ImageButton
+                android:id="@+id/buttonRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_right" />
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonUpdateWiFi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/btn_connect_hotspot" />
+
+            <ImageButton
+                android:id="@+id/buttonDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_down" />
+
+            <TextView />
+        </TableRow>
+    </TableLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

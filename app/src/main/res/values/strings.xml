@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Chocolate_Robo_Android_App_UI</string>
+
+    <string name="btn_start_record">Record route</string>
+    <string name="btn_refresh_record">Refresh recording</string>
+
+    <string name="btn_add_point">Add Point</string>
+
+    <string name="btn_reproduce_record">Reproduce</string>
+    <string name="btn_pause_record">Pause</string>
+    <string name="btn_resume_record">Resume</string>
+
+    <string name="edit_text_url_hint">Enter camera URL</string>
+    <string name="btn_load_url">Load</string>
+
+    <string name="btn_connect_hotspot">Update WiFi ssid and password</string>
+
+    <string name="btn_save">Save</string>
+    <string name="ssid">ssid</string>
+    <string name="password">password</string>
 </resources>
